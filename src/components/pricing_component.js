@@ -7,8 +7,8 @@ class PricingComponent extends Component {
         return (
             <div className='price' >
                 <div id='browser_icon' className={`${price.price_icon}`}>	</div>
-                <div class='random_container'>
-                    <div class='price_name_container'>
+                <div className='random_container'>
+                    <div className='price_name_container'>
                         <p className='head3'> {price.price_name} </p>
                     </div>
                 </div>
