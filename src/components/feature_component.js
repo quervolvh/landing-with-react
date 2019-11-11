@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FeatureComponent extends Component {
+function FeatureComponent(props){
 
-    render() {
-        const { feature } = this.props;
+        const { feature } = props;
         const logo = require(`../${feature.image}`);
         return (
             <div id='product_advert'>
@@ -17,7 +16,6 @@ class FeatureComponent extends Component {
                     </div>
             </div>
         )
-    }
 }
 
 export default FeatureComponent;

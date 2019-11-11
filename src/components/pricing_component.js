@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Ref } from '../actions/Actions'; 
 
-class PricingComponent extends Component {
+function PricingComponent (props){
 
-    render() {
-        const { price } = this.props;
+        const { price } = props;
         return (
-            <div className='price' >
+            <div className='price' ref={Ref[1]}>
                 <div id='browser_icon' className={`${price.price_icon}`}>	</div>
                 <div className='random_container'>
                     <div className='price_name_container'>
@@ -17,7 +17,7 @@ class PricingComponent extends Component {
                     <p className='price_per'> {price.period} </p>
                 </div>
                 <div>
-                    {this.props.children}
+                    {props.children}
                 </div>
                 <div className='button_back'>
                     <button className='blue'> sign up </button>
@@ -25,7 +25,6 @@ class PricingComponent extends Component {
 
             </div>
         )
-    }
 }
 
 export default PricingComponent;

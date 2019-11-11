@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import React from 'react';
 
-class QuestionComponent extends Component {
-    static propTypes = {
-        childVisibility: PropTypes.bool,
-        visibility: PropTypes.string
-    }
-    static defaultProps = {
-        childVisibility: false,
-        visibility: 'none'
-    }
+function QuestionComponent(props){
 
-    render() {
-        const { question } = this.props;
+        const { question } = props;
+        const { state } = props;
         return (
             <div>
-                <div className='question' onClick={this.props.onClick}>
+                <div className='question' onClick={() => props.onClick(state,question.index)}>
                     <p className='ask'> {question.topic} </p>
                     <div className={`arrow_down bookmark_arrow ${question.arrow}`}></div>
                 </div>
@@ -25,6 +16,5 @@ class QuestionComponent extends Component {
             </div>
         )
     }
-}
 
 export default QuestionComponent;

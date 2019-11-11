@@ -311,12 +311,15 @@ body{
     font-size: 11px;
     padding: 15px;
 }
-#contact_talk{
+.contact_talk{
     font-family: 'Aladin', cursive;
 	font-size: 30px;
     margin: 0px auto;
     color: white;
     line-height: 1.4em;
+}
+.aboutTitle .contact_talk{
+    color: rgb(30, 34, 255);
 }
 #enter{
     padding: 10px;
@@ -365,10 +368,29 @@ body{
     background-repeat: no-repeat;
     margin-top: 15px;
 }
+.about_us_body{
+    width: 95%;
+    color: #989ba7;
+}
+.About_icon{
+    background-image: url(images/illustration-hero.svg);
+    height: 300px;
+    background-size: contain;
+    width: 50%;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+}
+.contact_texts{
+    width: 50%;
+}
+#about{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+}
 #facebook{
      background-image: url('images/icon-facebook.svg');
-}
-#left{
 }
 #right{
     display: flex;
@@ -652,7 +674,7 @@ body{
     #faq{
         padding-bottom: 90px;
     }
-    #contact_talk{
+    .contact_talk{
         font-size: 24px;
     }
     #red{
